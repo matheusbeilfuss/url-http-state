@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# URL & HTTP State
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma pequena aplicação React para estudo de tecnologias para gerenciar o estado e realizar requisições HTTP, além da biblioteca shadcn/ui. A aplicação permite a criação e listagem de produtos.
 
-Currently, two official plugins are available:
+## Tecnologias Usadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React;
+- TypeScript;
+- Vite;
+- React Hook Form;
+- Zod;
+- React Query;
+- shadcn/ui;
+- Tailwind CSS.
 
-## Expanding the ESLint configuration
+## Funcionalidades do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Listagem de Produtos**: exibe uma lista de produtos com ID, nome e preço.
+- **Filtro de Produtos**: permite filtrar produtos por ID e nome.
+- **Criação de Produtos**: Formulário para adicionar novos produtos à lista.
+- **Persistência de Estado**: utiliza React Query para gerenciar e cachear o estado dos produtos.
 
-- Configure the top-level `parserOptions` property like this:
+## Gif do Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+![url-http-state](url-http-state.gif)
